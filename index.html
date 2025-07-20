@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenzie Clinic - Medicina Estética</title>
+    <meta name="description" content="Kenzie Clinic - Clínica de medicina estética moderna y profesional">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Marisa:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-montserrat text-dark overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="navbar-fixed">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#inicio" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+                        <img src="img/icon/KENZIE --03.png" alt="Kenzie Clinic" style="height: 15rem; width: 15rem;">
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div id="menu" class="ml-10 flex items-baseline space-x-4">
+                        <a href="#inicio" class="nav-link hover-underline" data-translate="nav.home">Inicio</a>
+                        <a href="#servicios" class="nav-link hover-underline"
+                            data-translate="nav.services">Servicios</a>
+                        <a href="#nosotras" class="nav-link hover-underline" data-translate="nav.about">Nosotras</a>
+                        <a href="#contacto" class="nav-link hover-underline" data-translate="nav.contact">Contacto</a>
+                        <a href="#localizacion" class="nav-link hover-underline"
+                            data-translate="nav.location">Localización
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-2">
+                    <button data-lang="es" class="language-btn active" onclick="setLanguage('es')">ES</button>
+                    <span class="text-gray-400">|</span>
+                    <button data-lang="en" class="language-btn" onclick="setLanguage('en')">EN</button>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-dark hover:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <a href="#inicio" class="mobile-nav-link hover-underline" data-translate="nav.home">Inicio</a>
+                <a href="#servicios" class="mobile-nav-link hover-underline" data-translate="nav.services">Servicios</a>
+                <a href="#nosotras" class="mobile-nav-link hover-underline" data-translate="nav.about">Nosotras</a>
+                <a href="#contacto" class="mobile-nav-link hover-underline" data-translate="nav.contact">Contacto</a>
+                <a href="#localizacion" class="mobile-nav-link hover-underline"
+                    data-translate="nav.location">Localización
+                </a>
+                <div class="flex items-center space-x-2 px-3 py-2">
+                    <button data-lang="es" class="language-btn active" onclick="setLanguage('es')">ES</button>
+                    <span class="text-gray-400">|</span>
+                    <button data-lang="en" class="language-btn" onclick="setLanguage('en')">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section id="inicio" class="min-h-screen flex items-center justify-center hero-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center" data-aos="fade-up">
+                <h1 class="font-marisa text-4xl md:text-6xl lg:text-7xl font-bold text-dark mb-6">
+                    <span data-translate="hero.title">Belleza</span> <span class="text-primary"
+                        data-translate="hero.titleHighlight">Natural</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto" data-translate="hero.subtitle">
+                    Descubre tu mejor versión con nuestros tratamientos de medicina estética de última generación
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#servicios" class="btn-primary" data-translate="hero.cta1">
+                        Conoce nuestros servicios
+                    </a>
+                    <a href="#contacto" class="btn-secondary" data-translate="hero.cta2">
+                        Agenda tu cita
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-marisa text-3xl md:text-4xl font-bold text-dark mb-4" data-translate="services.title">
+                    Nuestros Servicios
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-translate="services.subtitle">
+                    Ofrecemos una amplia gama de tratamientos estéticos personalizados para realzar tu belleza natural
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 class="font-marisa text-xl font-bold text-dark mb-3" data-translate="services.service1.title">
+                        Tratamientos Faciales</h3>
+                    <p class="text-gray-600" data-translate="services.service1.description">Rejuvenecimiento facial con
+                        tecnología avanzada y productos de alta calidad</p>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <h3 class="font-marisa text-xl font-bold text-dark mb-3" data-translate="services.service2.title">
+                        Tratamientos Corporales</h3>
+                    <p class="text-gray-600" data-translate="services.service2.description">Moldea tu figura con
+                        nuestros tratamientos corporales no invasivos</p>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3 class="font-marisa text-xl font-bold text-dark mb-3" data-translate="services.service3.title">
+                        Medicina Estética</h3>
+                    <p class="text-gray-600" data-translate="services.service3.description">Procedimientos seguros y
+                        efectivos realizados por profesionales certificados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotras Section -->
+    <section id="nosotras" class="py-20 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="font-marisa text-3xl md:text-4xl font-bold text-dark mb-6" data-translate="about.title">
+                        Nosotras
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6" data-translate="about.paragraph1">
+                        En Kenzie Clinic, somos un equipo de profesionales apasionadas por la medicina estética y el
+                        bienestar integral. Nuestro compromiso es brindarte la mejor atención personalizada.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8" data-translate="about.paragraph2">
+                        Con años de experiencia y formación continua, utilizamos las técnicas más avanzadas para
+                        ayudarte a sentirte segura y radiante.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                                <i class="fas fa-certificate text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-dark" data-translate="about.feature1.title">Certificadas
+                                </h4>
+                                <p class="text-sm text-gray-600" data-translate="about.feature1.description">
+                                    Profesionales certificadas</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                                <i class="fas fa-heart text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-dark" data-translate="about.feature2.title">Cuidado
+                                    Personalizado</h4>
+                                <p class="text-sm text-gray-600" data-translate="about.feature2.description">Atención
+                                    individualizada</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="relative">
+                        <div
+                            class="w-full h-96 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center">
+                            <i class="fas fa-users text-white text-6xl"></i>
+                        </div>
+                        <div
+                            class="absolute -bottom-6 -right-6 w-24 h-24 bg-accent rounded-full flex items-center justify-center">
+                            <i class="fas fa-star text-white text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-marisa text-3xl md:text-4xl font-bold text-dark mb-4" data-translate="contact.title">
+                    Contacto
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-translate="contact.subtitle">
+                    Estamos aquí para ayudarte. Contáctanos y agenda tu consulta personalizada
+                </p>
+            </div>
+
+            <div class="flex justify-center gap-8" data-aos="fade-up" data-aos-delay="200">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/34697675073" target="_blank" class="contact-button group">
+                    <img src="img/icon/whatsapp-2.png" alt="Icono" width="56" height="56">
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/kenzieclinic?igsh=MWZ5ZWdzenR6bzk5OA==" target="_blank"
+                    class="contact-button group">
+                    <img src="img/icon/instagram.png" alt="Icono" width="56" height="56">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localización Section -->
+    <section id="localizacion" class="py-20 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-marisa text-3xl md:text-4xl font-bold text-dark mb-4" data-translate="location.title">
+                    Localización
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-translate="location.subtitle">
+                    Visítanos en nuestro centro en el corazón de Barcelona
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Información de contacto -->
+                <div data-aos="fade-right">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <h3 class="font-marisa text-2xl font-bold text-dark mb-6" data-translate="location.info.title">
+                            Información de Contacto
+                        </h3>
+
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-white text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-dark mb-1"
+                                        data-translate="location.info.address.title">Dirección</h4>
+                                    <p class="text-gray-600" data-translate="location.info.address.text">
+                                        Avenida Diagonal, 466<br>
+                                        Barcelona, España
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-phone text-white text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-dark mb-1" data-translate="location.info.phone.title">
+                                        Teléfono</h4>
+                                    <p class="text-gray-600">
+                                        <a href="https://wa.me/34697675073"
+                                            class="hover:text-primary transition-colors">
+                                            +34 697 675 073
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-clock text-white text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-dark mb-1" data-translate="location.info.hours.title">
+                                        Horarios</h4>
+                                    <p class="text-gray-600" data-translate="location.info.hours.text">
+                                        Lunes - Viernes: 9:00 - 20:00<br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <a href="https://maps.google.com/?q=Avenida+Diagonal+466+Barcelona" target="_blank"
+                                class="btn-primary w-full justify-center">
+                                <i class="fas fa-directions mr-2"></i>
+                                <span data-translate="location.info.directions">Cómo llegar</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa -->
+                <div data-aos="fade-left">
+                    <div class="relative h-96 rounded-2xl overflow-hidden shadow-lg cursor-pointer hover:shadow-xl transition-shadow duration-300"
+                        onclick="window.open('https://maps.google.com/?q=Avenida+Diagonal+466+Barcelona', '_blank')">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.1847097393394!2d2.1527!3d41.3967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f7c8b0b3d9%3A0x0!2sAvinguda%20Diagonal%2C%20466%2C%2008006%20Barcelona!5e0!3m2!1ses!2ses!4v1640000000000!5m2!1ses!2ses"
+                            width="100%" height="100%"
+                            style="border:0; filter: grayscale(30%) sepia(20%) hue-rotate(20deg) brightness(1.1) contrast(0.9);"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent pointer-events-none">
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg">
+                            <p class="text-sm font-semibold text-dark">Haz clic para abrir en Google Maps</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <img src="KENZIE-img/ENTREGA MODELO/Arquivos Digitais/PNG(MARCA DAGUA)/KENZIE --01.png"
+                    alt="Kenzie Clinic" class="h-80 w-auto mx-auto mb-4">
+                <p class="text-gray-400 mb-6" data-translate="footer.description">Medicina estética profesional y
+                    personalizada</p>
+                <div class="flex justify-center gap-6">
+                    <a href="https://wa.me/34697675073" target="_blank"
+                        class="text-gray-400 hover:text-green-400 transition-colors">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/kenzieclinic?igsh=MWZ5ZWdzenR6bzk5OA==" target="_blank"
+                        class="text-gray-400 hover:text-pink-400 transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+                <div class="mt-8 pt-8 border-t border-gray-700">
+                    <p class="text-gray-400 text-sm" data-translate="footer.copyright">© 2024 Kenzie Clinic. Todos los
+                        derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Translation System -->
+    <script src="translations.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
